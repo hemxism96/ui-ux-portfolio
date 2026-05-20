@@ -173,7 +173,7 @@ export const projects: Project[] = [
       "L’apprentissage d’une langue nécessite de la régularité. Pour éviter l’attrition (churn) et rendre l’expérience engageante, j’ai conçu un Brandbook complet incluant de nouvelles palettes de couleurs, des choix typographiques modernes et la création d’une mascotte emblématique.",
       "Pour donner vie à cette identité, j’ai animé la mascotte via Figma et Lottie Files. Ces micro-interactions et animations ont été stratégiquement intégrées dans l’application pour récompenser l’utilisateur et dynamiser son parcours, rendant l’interface beaucoup plus organique et vivante.",
     ],
-    cover: "/images/projects/Mockup_projet_3.png",
+    cover: "/images/projects/3_1.png",
     gallery: [
       "/images/projects/3_2.png",
       "/images/projects/3_3.png",
