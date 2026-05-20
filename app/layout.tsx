@@ -31,8 +31,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${sans.variable} ${serif.variable}`}>
-      <body>
+    <html lang="fr" className={`${sans.variable} ${serif.variable}`} suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <Nav />
         <main>{children}</main>
         <Footer />

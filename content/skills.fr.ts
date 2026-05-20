@@ -1,13 +1,14 @@
 export const skills = {
   outils: [
     "Figma",
-    "Framer",
-    "Adobe XD",
-    "Photoshop",
+    "Mailchimp",
+    "Adobe Photoshop",
     "Illustrator",
+    "Express",
     "After Effects",
+    "Premiere Pro",
     "Notion",
-    "Webflow",
+    "Jira",
   ],
   methodes: [
     "Recherche utilisateur",
@@ -19,5 +20,5 @@ export const skills = {
     "Atelier de co-création",
     "Direction artistique",
   ],
-  langues: ["Français", "Anglais", "Coréen"],
+  langues: ["Français (Maternelle)", "Anglais (C2)", "Coréen (B1)"],
 } as const;

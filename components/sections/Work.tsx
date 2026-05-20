@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/content/projects.fr";
 import { FadeUp } from "@/components/motion/FadeUp";
@@ -22,13 +23,22 @@ export function Work() {
                 >
                   <Link href={`/work/${p.slug}`} className="block">
                     <div className="relative aspect-[4/3] overflow-hidden bg-accent-50 rounded-sm">
-                      <div className="absolute inset-0 grid place-items-center">
-                        <span className="font-serif italic text-3xl text-accent/40">
-                          {p.title}
-                        </span>
-                      </div>
-                      <div className="absolute inset-0 transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]" />
-                      <div className="absolute top-4 left-4 text-[10px] uppercase tracking-widest text-accent/70">
+                      {p.cover ? (
+                        <Image
+                          src={p.cover}
+                          alt={`${p.title} — visuel principal`}
+                          fill
+                          sizes="(min-width: 768px) 60vw, 100vw"
+                          className="object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 grid place-items-center">
+                          <span className="font-serif italic text-3xl text-accent/40">
+                            {p.title}
+                          </span>
+                        </div>
+                      )}
+                      <div className="absolute top-4 left-4 text-[10px] uppercase tracking-widest text-bg/90 mix-blend-difference">
                         {p.index} / {p.year}
                       </div>
                     </div>

@@ -10,4 +10,5 @@ export const profile = {
   ],
   email: "jules-victorbretecher@orange.fr",
   linkedin: "https://www.linkedin.com/in/jules-victor-bretecher-uxuidesigner/",
+  photo: "/images/profile.JPEG",
 } as const;

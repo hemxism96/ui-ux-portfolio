@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { profile } from "@/content/profile.fr";
 import { FadeUp } from "@/components/motion/FadeUp";
 
@@ -10,10 +11,15 @@ export function About() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start">
         <FadeUp className="md:col-span-5">
           <div className="aspect-[4/5] bg-accent-50 relative overflow-hidden rounded-sm">
-            <div className="absolute inset-0 grid place-items-center text-muted text-sm">
-              <span className="font-serif italic text-2xl text-accent/60">portrait</span>
-            </div>
-            <div className="absolute bottom-4 left-4 right-4 text-[10px] uppercase tracking-widest text-accent/70 flex justify-between">
+            <Image
+              src={profile.photo}
+              alt={`Portrait de ${profile.name}`}
+              fill
+              sizes="(min-width: 768px) 40vw, 100vw"
+              className="object-cover"
+              priority
+            />
+            <div className="absolute bottom-4 left-4 right-4 text-[10px] uppercase tracking-widest text-bg/90 mix-blend-difference flex justify-between">
               <span>Réf. 001</span>
               <span>{profile.location}</span>
             </div>
